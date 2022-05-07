@@ -11,5 +11,7 @@ namespace INK_API.DTO
         public string Name { get; set; }
         public int Level { get; set; }
         public int? ParentID { get; set; }
+        public int? LunchTimeID { get; set; }
+        public string LunchTime { get; set; }
     }
 }

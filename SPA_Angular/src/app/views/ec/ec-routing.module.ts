@@ -1,3 +1,4 @@
+import { LunchTimeComponent } from './lunch-time/lunch-time.component';
 import { WorkListComponent } from './work-list/work-list.component';
 import { SettingWorkplanComponent } from './setting-workplan/setting-workplan.component';
 import { PrintQrcodeGlueWorkplanComponent } from './schedule-detail-workplan/print-qrcode-glue-workplan/print-qrcode-glue-workplan.component';
@@ -145,6 +146,14 @@ const routes: Routes = [
               breadcrumb: 'Glue'
             }
           },
+          {
+            path: 'building-lunch-time',
+            component: LunchTimeComponent,
+            data: {
+              title: 'Building Lunch Time',
+              breadcrumb: 'Building Lunch Time'
+            }
+          },
         ]
       },
       // end setting
@@ -186,7 +195,7 @@ const routes: Routes = [
                     //   breadcrumb: ''
                     // }
                   }
-                  
+
                 ]
               },
               {
@@ -211,7 +220,7 @@ const routes: Routes = [
                     path: ':id/:treatment',
                     component: ScheduleDetailWorkplanComponent,
                     children: [
-                      
+
                     ]
                     // data: {
                     //   breadcrumb: ''

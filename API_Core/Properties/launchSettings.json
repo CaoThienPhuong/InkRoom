@@ -31,7 +31,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "http://10.4.5.132:5000"
+      "applicationUrl": "http://10.4.4.224:5000"
     }
   }
 }

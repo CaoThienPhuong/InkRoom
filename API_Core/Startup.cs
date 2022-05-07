@@ -142,6 +142,8 @@ namespace INK_API
             services.AddScoped<IWorkPlanRepository, WorkPlanRepository>();
             services.AddScoped<IWorkPlanMasterRepository, WorkPlanMasterRepository>();
             services.AddScoped<IPoGlueRepository, PoGlueRepository>();
+            services.AddScoped<ILunchTimeRepository, LunchTimeRepository>();
+            services.AddScoped<IPeriodMixingRepository, PeriodMixingRepository>();
 
 
             //Services
@@ -167,6 +169,8 @@ namespace INK_API
             services.AddScoped<IPoGlueService, PoGlueService>();
             services.AddScoped<ISettingWorkPlanService, SettingWorkPlanService>();
             // services.AddScoped<IGlueService, GlueService>();
+            services.AddScoped<ILunchTimeService, LunchTimeService>();
+            services.AddScoped<IPeriodMixingService, PeriodMixingService>();
 
             //extension
             services.AddScoped<IMailExtension, MailExtension>();

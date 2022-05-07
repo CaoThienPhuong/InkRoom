@@ -34,6 +34,8 @@ namespace INK_API.Data
         public DbSet<Role> Roles { get; set; }
         public DbSet<RoleUser> RoleUsers { get; set; }
         public DbSet<BuildingGlue> BuildingGlues { get; set; }
+        public DbSet<LunchTime> LunchTime { get; set; }
+        public DbSet<PeriodMixing> PeriodMixing { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Role>().HasKey(x => x.ID);

@@ -1,21 +1,18 @@
 {
   "format": 1,
   "restore": {
-    "F:\\Angular\\SYSTEM\\InkRoom\\API_Core\\INK-API.csproj": {}
+    "D:\\KMAP\\2022\\duan\\InkRoom\\API_Core\\INK-API.csproj": {}
   },
   "projects": {
-    "F:\\Angular\\SYSTEM\\InkRoom\\API_Core\\INK-API.csproj": {
+    "D:\\KMAP\\2022\\duan\\InkRoom\\API_Core\\INK-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\Angular\\SYSTEM\\InkRoom\\API_Core\\INK-API.csproj",
+        "projectUniqueName": "D:\\KMAP\\2022\\duan\\InkRoom\\API_Core\\INK-API.csproj",
         "projectName": "INK-API",
-        "projectPath": "F:\\Angular\\SYSTEM\\InkRoom\\API_Core\\INK-API.csproj",
+        "projectPath": "D:\\KMAP\\2022\\duan\\InkRoom\\API_Core\\INK-API.csproj",
         "packagesPath": "C:\\Users\\leo.doan\\.nuget\\packages\\",
-        "outputPath": "F:\\Angular\\SYSTEM\\InkRoom\\API_Core\\obj\\",
+        "outputPath": "D:\\KMAP\\2022\\duan\\InkRoom\\API_Core\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\leo.doan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -120,7 +117,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

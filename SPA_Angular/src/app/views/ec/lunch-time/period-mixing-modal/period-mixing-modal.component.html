@@ -1,0 +1,77 @@
+<div class="modal-header">
+  <h4 class="modal-title">
+    <i class="fas fa-plus mr-1"></i>Time Period Mixing List
+    <span style="color: #f86c6b; font-weight: 700;">
+      {{title}}
+    </span>
+  </h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+
+
+        <div class="card-body table-responsive p-0 table-striped">
+
+          <ejs-grid #grid
+            [dataSource]="periodMixingData"
+            allowPaging='true'
+            gridLines='Both'
+            allowResizing='true'
+            showColumnMenu='true'
+            (actionBegin)="actionBegin($event)"
+            [toolbar]='toolbar'
+            [pageSettings]='pageSettings'
+            allowExcelExport='true'
+            (toolbarClick)='toolbarClick($event)'
+            [editSettings]='editSettings'
+          >
+            <e-columns>
+              <e-column field="" width="80" isPrimaryKey="true" headerText="Period" textAlign="center">
+                <ng-template #headerTemplate let-data>
+                  Period
+                </ng-template>
+                <ng-template #template let-data>
+                  {{NO(data.index)}}
+                </ng-template>
+                <ng-template #editTemplate let-data>
+                  {{NO(data.index)}}
+                </ng-template>
+              </e-column>
+
+              <e-column field="startTime" headerText="Start Time" textAlign="center">
+                <ng-template #headerTemplate let-data>
+                  Start Time
+                </ng-template>
+                <ng-template #template let-data>
+                  {{data.startTime | date: 'HH:mm'}}
+                </ng-template>
+                <ng-template #editTemplate let-data>
+                  <kendo-timepicker  format="HH:mm" [(value)]="startTime"></kendo-timepicker>
+                </ng-template>
+              </e-column>
+              <e-column field="endTime" headerText="End Time" textAlign="center">
+                <ng-template #headerTemplate let-data>
+                  End Time
+                </ng-template>
+                <ng-template #template let-data>
+                  {{data.endTime | date: 'HH:mm'}}
+                </ng-template>
+                <ng-template #editTemplate let-data>
+                  <kendo-timepicker format="HH:mm" [(value)]="endTime"></kendo-timepicker>
+                </ng-template>
+              </e-column>
+            </e-columns>
+          </ejs-grid>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-danger" (click)="activeModal.close('Close click')">Close</button>
+</div>

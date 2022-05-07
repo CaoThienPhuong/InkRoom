@@ -52,7 +52,6 @@ import { SearchDirective } from './search.directive';
 import { SelectTextDirective } from './select.text.directive';
 import { TooltipModule } from '@syncfusion/ej2-angular-popups';
 import { TagInputModule } from 'ngx-chips';
-import { TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { DateTimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { SelectQrCodeDirective } from './select.qrcode.directive';
@@ -71,6 +70,9 @@ import { ChemicalPrintQrcodeComponent } from './chemical/chemical-print-qrcode/c
 import { WorkplanComponent } from './workplan/workplan.component';
 import { ColorPickerModule } from 'ngx-color-picker';
 import { TextareaAutosizeModule } from 'ngx-textarea-autosize';
+import { LunchTimeComponent } from './lunch-time/lunch-time.component';
+import { PeriodMixingModalComponent } from './lunch-time/period-mixing-modal/period-mixing-modal.component';
+import {TimePickerModule} from '@progress/kendo-angular-dateinputs';
 const lang = localStorage.getItem('lang');
 let defaultLang: any;
 if (lang) {
@@ -153,7 +155,9 @@ if (lang) {
     TotalInkModalComponent,
     TotalChemicalModalComponent,
     SettingWorkplanComponent,
-    WorkListComponent
+    WorkListComponent,
+    LunchTimeComponent,
+    PeriodMixingModalComponent
   ]
 })
 export class ECModule { }

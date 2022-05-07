@@ -1,0 +1,103 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+
+
+      <div class="card-body table-responsive p-0">
+
+        <ejs-grid #grid
+          [dataSource]="buildingData"
+          allowPaging='true'
+          gridLines='Both'
+          allowResizing='true'
+          showColumnMenu='true'
+          (created)='createdUsers()'
+          (actionBegin)="actionBegin($event)"
+          [toolbar]='toolbarAccount'
+          [pageSettings]='pageSettings'
+          allowExcelExport='true'
+          (toolbarClick)='toolbarClick($event)'
+          [editSettings]='editSettings'
+        >
+          <e-columns>
+            <e-column field="level" width="80" isPrimaryKey="true" headerText="Level" textAlign="center">
+              <ng-template #headerTemplate let-data>
+                {{'LEVEL_HEADER' | translate}}
+              </ng-template>
+              <ng-template #editTemplate let-data>
+                {{data.level}}
+              </ng-template>
+            </e-column>
+            <!-- <e-column field="Username" headerText="Username">
+              <ng-template #headerTemplate let-data>
+                {{'USERNAME_HEADER' | translate}}
+              </ng-template>
+            </e-column>
+            <e-column field="EmployeeID" width="120" headerText="Account">
+              <ng-template #headerTemplate let-data>
+                {{'EMPLOYEE_HEADER' | translate}}
+              </ng-template>
+            </e-column> -->
+
+            <!-- <e-column field="Email" headerText="Email">
+              <ng-template #template let-data>
+                <ejs-tooltip [content]="tooltips(data.Email)">
+                  {{data.Email}}
+                </ejs-tooltip>
+              </ng-template>
+            </e-column> -->
+            <e-column field="name" headerText="Building Name" textAlign="center">
+              <ng-template #headerTemplate let-data>
+                {{'BUILDING_NAME_HEADER' | translate}}
+              </ng-template>
+            </e-column>
+            <e-column field="lunchTime" headerText="Lunch Time" textAlign="center">
+              <ng-template #headerTemplate let-data>
+                {{'LUNCH_TIME_HEADER' | translate}}
+              </ng-template>
+            </e-column>
+            <e-column field="" isPrimaryKey="true" headerText="Option" textAlign="center">
+              <ng-template #headerTemplate let-data>
+                {{'OPTION_HEADER' | translate}}
+              </ng-template>
+              <ng-template #template let-data>
+                <ng-container>
+                  <button type="button" (click)="openPeriodModal(data)"
+                    class="btn btn-info rounded-pill">
+                    <i class="fas fa-plus mr-1"></i>{{'TIME_PERIOD_MIXING' | translate}}
+                  </button>
+                </ng-container>
+              </ng-template>
+              <ng-template #editTemplate let-data>
+                N/A
+              </ng-template>
+            </e-column>
+
+            <!-- <e-column field="" isPrimaryKey="true" textAlign='Center' headerText="Status">
+              <ng-template #headerTemplate let-data>
+                {{'STATUS_HEADER' | translate}}
+              </ng-template>
+              <ng-template #template let-data>
+                <ng-container *ngIf="data.Status == true; else elseTemplate">
+                  <button type="button" (click)="blockAccount(data)"
+                    class="btn bg-gradient-info btn-sm rounded-pill">
+                    <i class="fas fa-lock-open"></i> {{'STATUS_ABLE' | translate}}
+                  </button>
+                </ng-container>
+                <ng-template #elseTemplate>
+                  <button type="button" (click)="blockAccount(data)"
+                    class="btn bg-gradient-red btn-sm rounded-pill">
+                    <i class="fas fa-lock"></i> {{'STATUS_UNABLE' | translate}}
+                  </button>
+                </ng-template>
+
+              </ng-template>
+              <ng-template #editTemplate let-data>
+              </ng-template>
+            </e-column> -->
+          </e-columns>
+        </ejs-grid>
+      </div>
+    </div>
+  </div>
+</div>

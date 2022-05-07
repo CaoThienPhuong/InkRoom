@@ -11,5 +11,6 @@ namespace INK_API.Models
         public string Name { get; set; }
         public int Level { get; set; }
         public int? ParentID { get; set; }
+        public int? LunchTimeID { get; set; }
     }
 }

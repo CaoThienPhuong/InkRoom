@@ -48,6 +48,8 @@ namespace INK_API.Helpers.AutoMapper
             CreateMap<Part, ScheduleUpdatePartDTO>();
             CreateMap<TreatmentWay, TreatmentWayDto>();
             // CreateMap<ScheduleDto, Schedules>();
+            CreateMap<LunchTime, LunchTimeDto>();
+            CreateMap<PeriodMixing, PeriodMixingDto>();
 
         }
 

@@ -46,6 +46,8 @@ namespace INK_API.Helpers.AutoMapper
             CreateMap<WorkPlanMasterDTO, WorkPlanMaster>();
             CreateMap<PoGlueDTO, PoGlue>();
             //CreateMap<AuditTypeDto, MES_Audit_Type_M>();
+            CreateMap<LunchTimeDto, LunchTime>();
+            CreateMap<PeriodMixingDto, PeriodMixing>();
         }
     }
 }
